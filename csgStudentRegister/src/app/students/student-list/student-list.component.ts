@@ -15,6 +15,8 @@ export class StudentListComponent implements OnInit {
   list: Student[];
   constructor(public service: StudentService, public firestore: AngularFirestore, public toastr:ToastrService) { }
 
+  searchText: string = "";
+
   ngOnInit() {
     this.service.getStudents().subscribe(actionArray =>{
       this.list = actionArray.map(item => {
@@ -26,6 +28,10 @@ export class StudentListComponent implements OnInit {
     });
 
     
+  }
+
+  filteredCondition(stud: Student){
+      return stud.studentName.toLowerCase().indexOf(this.searchText.toLowerCase()) != -1;
   }
 
   onEdit(stud: Student) {
