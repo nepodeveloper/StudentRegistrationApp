@@ -23,3 +23,11 @@ Discussed Points :
 6) now app is ready to run by using this command
 
 7) Open new terminal and run "ng serve"
+
+## Reason for tech stak
+1) Angular offers a fast build approach where some librabries are already pre built
+2) Responsive for mobile and desktop
+3) Offers option to build a web app where end user wont have to install and  pre requisites or have a certain hardware type
+3) Firebase offer reliable safe cloud computing
+4) Data sync is near realtime 
+5) Firebase confoguration/modeling for this scale of an app is minimal.
