@@ -1,0 +1,21 @@
+<table class="table table-hover">
+    <thead>
+        <th>Class Room</th>
+        <th>Date</th>
+        <th>Grade</th>
+        <th>Time</th>
+        <th>Student Name</th>
+        <td></td>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stud of list">
+            <td (click)="onEdit(stud)">{{stud.classRoomName}}</td>
+            <td (click)="onEdit(stud)">{{stud.date}}</td>
+            <td (click)="onEdit(stud)">{{stud.grade}}</td>
+            <td (click)="onEdit(stud)">{{stud.time}}</td>
+            <td (click)="onEdit(stud)">{{stud.studentName}}</td>
+            <td><a  class="btn text-danger" (click)="onDelete(stud.id)"><i class="fa fa-trash"></i></a></td>
+            <!-- <button class="btn btn-outline-danger" (click)="onDelete(stud.id)">Delete</button> -->
+        </tr>
+    </tbody>
+</table>
