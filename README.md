@@ -5,8 +5,8 @@ An Angular 6 Project to that uses CRUD Operations and uses Firebase as cloud sto
 Discussed Points :
 - Form design using reactive forms
 - Firebase crud operations 
-- List records in angular 6 table
-- Angular 6 table filter operation
+- List records in angular 7 table
+- Angular 7 table search option to help with reportingoperation
 
 ## Steps to run app
 
