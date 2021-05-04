@@ -28,7 +28,8 @@ export class StudentComponent implements OnInit {
       grade: '',
       date: '',
       time: '',
-      studentName: ''
+      studentName: '',
+      attendance: ''
     }
   }
 

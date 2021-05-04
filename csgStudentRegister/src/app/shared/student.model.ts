@@ -5,4 +5,5 @@ export class Student {
      date: string;
      time: string;
      studentName: string;
+     attendance: string;
 }
