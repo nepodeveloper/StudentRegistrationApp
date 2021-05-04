@@ -1,0 +1,43 @@
+<div class="row">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">Student Register</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>     
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reports</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+  <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
+  <div class="form-group">
+    <input name="classRoomName" #classRoomName="ngModel" [(ngModel)]="service.formData.classRoomName" class="form-control" placeholder="Class Name" required>
+    <div *ngIf="classRoomName.invalid && classRoomName.touched" class="validation-error">This field is required.</div>
+  </div>
+  <div class="form-group">
+    <input name="grade" #grade="ngModel" [(ngModel)]="service.formData.grade" class="form-control" placeholder="Grade">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <input type="date" name="date" #date="ngModel" [(ngModel)]="service.formData.date" class="form-control">
+    </div>
+    <div class="form-group  col-md-6">
+      <input type="time" name="time" #time="ngModel" [(ngModel)]="service.formData.time" class="form-control">
+    </div>
+  </div>
+  <div class="form-group">
+    <input name="studentName" #studentName="ngModel" [(ngModel)]="service.formData.studentName" class="form-control" placeholder="Student Name">
+  </div>
+  <div class="form-group">
+    <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">Mark Student</button>
+  </div>
+</form>
